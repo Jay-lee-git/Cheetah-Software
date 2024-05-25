@@ -620,9 +620,10 @@ void ConvexMPCLocomotion::solveDenseMPC(int *mpcTable, ControlFSMData<float> &da
   Timer t2;
   //cout << "dtMPC: " << dtMPC << "\n";
   update_problem_data_floats(p,v,q,w,r,yaw,weights,trajAll,alpha,mpcTable);
-  //t2.stopPrint("Run MPC");
-  //printf("MPC Solve time %f ms\n", t2.getMs());
 
+"""
+call retrieves the computed force components for each leg and axis. The computed solution (f) is the desired ground reaction force f_i
+"""
   for(int leg = 0; leg < 4; leg++)
   {
     Vec3<float> f;
